@@ -1,2 +1,2 @@
 # CompPhysics
-Computational Physics Project Files and Materials
+Computational Physics Project Files and Materials.   
