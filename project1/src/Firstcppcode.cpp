@@ -9,7 +9,7 @@ using namespace std;  // Why namespace?
 // object for output files, for input files use ifstream
 ofstream ofile;
 // Functions used, why is this an inline function?
-inline double f(double x){return 100.0*exp(-10.0*x);
+inline double ff(double x){return 100.0*exp(-10.0*x);
 }
 inline double exact(double x) {return 1.0-(1-exp(-10))*x-exp(-10*x);}
 
@@ -57,7 +57,7 @@ int main(int argc, char *argv[]){
       //
       for (int i=0; i <= n; i++){
           x[i] = i*h;
-          f[i] = hh*f(i*h);
+          f[i] = hh*ff(i*h);
           
       }
       
