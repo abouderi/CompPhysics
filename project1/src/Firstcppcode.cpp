@@ -50,6 +50,17 @@ int main(int argc, char *argv[]){
       double *x = new double[n+1];  //x-value
       double *u = new double[n+1];  //solution
       
+      u[0] = 0.0;  u[n] = 0.0;  //u[0] = u[n] = 0.0;
+      
+      d[0] = d[n] = 2.0;
+      
+      //
+      for (int i=0; i <= n; i++){
+          x[i] = i*h;
+          f[i] = hh*f(i*h);
+          
+      }
+      
       
 
 
