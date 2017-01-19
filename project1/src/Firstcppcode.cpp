@@ -71,16 +71,24 @@ int main(int argc, char *argv[]){
       for (int i=2; i<n; i++){
           f[i] = f[i] + f[i-1]/d[i-1];
       }
+      //Same thing as above
+      //for (int i=2; i<n; i++) f[i] += f[i-1]/d[i-1];
+   
       
       
       //Backward Substitution
+      
+      u[n-1] = f[n-1]/d[n-1];
+      
+      for (int i = n-2; i>0; i--) u[i] = (f[i]+u[i+1])/d[i];
+      
       
 
 
 
       ofile.open(fileout);
       ofile << setiosflags(ios::showpoint | ios::uppercase);
-      /*
+      
       //      ofile << "       x:             approx:          exact:       relative error" << endl;
       for (int i = 1; i < n;i++) {
 	double xval = x[i];
@@ -90,10 +98,10 @@ int main(int argc, char *argv[]){
          ofile << setw(15) << setprecision(8) << exact(xval);
          ofile << setw(15) << setprecision(8) << log10(RelativeError) << endl;
       }
-      
+      ofile.close();
       delete [] x; delete [] d; delete [] b; delete [] solution;
-     */
-  ofile.close();
+     
+  
     }
       //  End of long set of comments
     return 0;   // returns zero upon success
