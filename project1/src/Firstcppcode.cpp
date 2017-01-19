@@ -64,7 +64,7 @@ int main(int argc, char *argv[]){
       
       //set up d[i] where d[i]=(1+i)/i
       for (int i=1; i<n; i++){
-          (i+1.0)/((double) i);
+          d[i] = (i+1.0)/((double) i);
       }
       
       //Forward Substitution
