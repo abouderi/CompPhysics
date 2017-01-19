@@ -40,6 +40,9 @@ int main(int argc, char *argv[]){
       fileout.append(argument);
 
       //   To be filled inn during lab session
+      double h = 1.0/((double) n);
+      double hh = h*h;
+      
 
 
 
