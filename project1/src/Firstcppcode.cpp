@@ -46,7 +46,7 @@ int main(int argc, char *argv[]){
       //need to have flexible (dynamic memory allocation)
       double *d = new double[n+1];  //diagonal matrix elements
       double *f = new double[n+1];  //Right Hand Side
-      double *e = new double[n+1];  //non-diagonal matrix elements
+      //double *e = new double[n+1];  //non-diagonal matrix elements
       double *x = new double[n+1];  //x-value
       double *u = new double[n+1];  //solution
       
@@ -92,14 +92,14 @@ int main(int argc, char *argv[]){
       //      ofile << "       x:             approx:          exact:       relative error" << endl;
       for (int i = 1; i < n;i++) {
 	double xval = x[i];
- 	 double RelativeError = fabs((exact(xval)-solution[i])/exact(xval));
+ 	 double RelativeError = fabs((exact(xval)-u[i])/exact(xval));
          ofile << setw(15) << setprecision(8) << xval;
-         ofile << setw(15) << setprecision(8) << solution[i];
+         ofile << setw(15) << setprecision(8) << u[i];
          ofile << setw(15) << setprecision(8) << exact(xval);
          ofile << setw(15) << setprecision(8) << log10(RelativeError) << endl;
       }
       ofile.close();
-      delete [] x; delete [] d; delete [] b; delete [] solution;
+      delete [] x; delete [] d; delete [] f; delete [] u;
      
   
     }
