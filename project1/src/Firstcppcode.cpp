@@ -40,8 +40,16 @@ int main(int argc, char *argv[]){
       fileout.append(argument);
 
       //   To be filled inn during lab session
-      double h = 1.0/((double) n);
+      double h = 1.0/((double) n); //make sure we don't have integer division
       double hh = h*h;
+      
+      //need to have flexible (dynamic memory allocation)
+      double *d = new double[n+1];  //diagonal matrix elements
+      double *f = new double[n+1];  //Right Hand Side
+      double *e = new double[n+1];  //non-diagonal matrix elements
+      double *x = new double[n+1];  //x-value
+      double *u = new double[n+1];  //solution
+      
       
 
 
