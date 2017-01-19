@@ -89,7 +89,7 @@ int main(int argc, char *argv[]){
       ofile.open(fileout);
       ofile << setiosflags(ios::showpoint | ios::uppercase);
       
-      //      ofile << "       x:             approx:          exact:       relative error" << endl;
+      ofile << "       x:             approx:          exact:       relative error" << endl;
       for (int i = 1; i < n;i++) {
 	double xval = x[i];
  	 double RelativeError = fabs((exact(xval)-u[i])/exact(xval));
