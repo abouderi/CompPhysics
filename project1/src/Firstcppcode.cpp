@@ -39,7 +39,7 @@ int main(int argc, char *argv[]){
       // Final filename as filename-i-
       fileout.append(argument);
 
-      //   To be filled inn during lab session
+      //   To be filled in during lab session
       double h = 1.0/((double) n); //make sure we don't have integer division
       double hh = h*h;
       
@@ -103,7 +103,7 @@ int main(int argc, char *argv[]){
      
   
     }
-      //  End of long set of comments
+      
     return 0;   // returns zero upon success
 }
 
