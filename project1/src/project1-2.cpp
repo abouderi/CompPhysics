@@ -4,6 +4,8 @@
 #include <cstdlib>
 #include <cmath>
 #include <cstring>
+#include "time.h"   //  you have to include the time.h header
+
 
 using namespace std;
 
@@ -28,6 +30,10 @@ int main(int argc, char *argv[]){
     
     double invers_period = 1./RAND_MAX;
     
+    
+    clock_t start, finish;  //  declare start and final time
+    start = clock();
+    
     srand(time(NULL));
     // Setting general square matrices with random matrix elements
     for(int i = 0; i<n; i++){
@@ -49,11 +55,13 @@ MatrixInverse(B, n);
 
 cout << "Inverse A:" << endl;
 WriteMatrix(B, n);
-
+ 
 cout << "We should have an identity matrix:" << endl;
 MatrixMultiplication(A,B,n);
 
-
+finish = clock();
+cout << "Time:" << endl;
+ cout <<   ( (finish - start)/CLOCKS_PER_SEC ) << endl;
 
 return 0;
 

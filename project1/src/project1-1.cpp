@@ -3,10 +3,12 @@
 #include <cstdio>
 #include <cstdlib>
 #include <cmath>
-#include <cstring>
+#include <cstring> 
 #include <fstream>
 #include <iomanip> 
 #include <string>
+#include "time.h"   //  you have to include the time.h header
+
 
 using namespace std;  // Why namespace? 
 
@@ -22,6 +24,9 @@ int main(int argc, char *argv[]){
   int exponent; 
   string filename; //  This is a useful way to define a text string, alternatively you can use characters
     // We read also the basic name for the output file and the highest power of 10^n we want
+  
+  clock_t start, finish;  //  declare start and final time
+    start = clock();
     if( argc <= 1 ){
           cout << "Bad Usage: " << argv[0] <<
               " read also file name on same line and max power 10^n" << endl;
@@ -107,7 +112,9 @@ int main(int argc, char *argv[]){
      
   
       
-      
+      finish = clock();
+      cout << "Time:" << endl;
+    cout << ( (finish - start)/CLOCKS_PER_SEC ) << endl;
       
       
       
