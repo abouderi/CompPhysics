@@ -38,9 +38,12 @@ int main(int argc, char *argv[]){
     // Setting general square matrices with random matrix elements
     for(int i = 0; i<n; i++){
         for(int j = 0; j<n; j++){
-            double x= double(rand())*invers_period;
+            double x= 0.0;
             A[i][j] = x;
+            
+          
             B[i][j] = A[i][j];
+            
            
         }
     }
