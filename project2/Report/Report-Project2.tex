@@ -1,0 +1,137 @@
+\documentclass[%
+reprint,
+superscriptaddress,
+%groupedaddress,
+%unsortedaddress,
+%runinaddress,
+%frontmatterverbose, 
+%=preprint,
+showpacs,
+%preprintnumbers,
+nofootinbib,
+%nobibnotes,
+bibnotes,amsmath,amssymb,aps,
+%pra,
+%prb, 
+prc, 
+%rmp,
+%prstab,  
+%prstper,
+%floatfix,
+]{revtex4-1}
+
+\usepackage{graphicx,dblfloatfix,afterpage,caption}
+\usepackage{dcolumn}
+\usepackage{bm}
+\usepackage[colorlinks=true,urlcolor=blue,citecolor=blue,linkcolor=blue]{hyperref}
+\usepackage{color}
+\usepackage{natbib}
+\usepackage{float}
+\usepackage{soul}
+\usepackage{caption}
+
+
+
+
+\begin{document}
+	\title{Project 1}
+	\author{Eric Aboud}
+	\affiliation{Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48823}
+	\author{Parker Brue}
+	\affiliation{Department of Physics and Astronomy, Michigan State University, East Lansing, MI 48823}
+	\begin{abstract}
+	We present an algorithm that allows us to solve the Schr$\ddot{\textrm{o}}$dinger equation for electron-electron interactions.  Using Jacobi rotation methods, we are able to solve for the eigenvalues for a known potential equation.  Using inherent eignenvalue solvers, we are able to verify the eigenvalues obtained through the Jacobi rotation methods.  Comparisons between potential strengths provide insight on electron-electron interactions.
+	\end{abstract}
+	\maketitle
+	
+	
+	\section{Introduction}
+	
+	One of the simplest cases of the Schr$\ddot{\textrm{o}}$dinger equation comes from electron-electron interactions within a three-dimensional harmonic oscillator.  To further simplify the problem, we can first solve for a case with no Coulomb interactions.  Using multiple eigenvalue solvers (Jacobi rotations and built-in solvers) we are able to determine the eigenvalues resulting from a given Schr$\ddot{\textrm{o}}$dinger equation.  Analysis of the results provide insight on the effectiveness of the eigenvalue solvers.
+	
+	
+	\section{Theory, algorithms and methods}
+	
+	The 
+	
+	
+		We begin our analysis by creating a simple test that allows us to verify the orthogonality preservation of the resulting eigenvalues.
+		
+	\section{Analysis}
+	
+	\subsection{Unit Tests}
+	In order to verify the accuracy of the eigenvalue solvers, multiple tests were used.  The first test that was used was an orthoganality preservation test.  By taking two different eigenvectors of the diagonal matrix formed via the eigenvalue solvers, we would expect them to be orthogonal.  Similarly, if we took identical eigenvectors we would expect a nonzero solution.  These results are also portrayed by column vectors of a tri-diagonal matrix, including the one that was used to demonstrate the potential of the three-dimensional Schr$\ddot{\textrm{o}}$dinger equation.
+	
+	We set up a test that took two column vectors of the potential tridiagonal matrix and solved for the dot product.  By calculating this, we verified that similar column vectors of the potential matrix produced a nonzero value (8.88 for a $N=5$ matrix) and that non-similar column vectors produced zero.
+	
+	We used this test after solving for the non-interacting case.  We found that similar eigenvectors produced a nonzero value (8.62 for a $N=5$ matrix) and non-similar eigenvectors produced zero.
+	
+	We then used this test after solving for the interacting case.  We found that non-similar eigenvectors produced zero while similar eigenvalues produced a non-zero solution (5.22 for a $N=5$ matrix, while the potential matrix for this case yielded 3.03).
+	
+	A second test was performed to check the accuracy of the Jacobi rotation eigenvalue solver.  This test involved the use of small $N$ matrices to compare to the c++ software package Armadillo \cite{Armadillo}. 
+	
+	\subsection{Non-interacting Case}
+	
+	We began our analysis with a simple non-interacting form of the Schr$\ddot{\textrm{o}}$dinger equation.  By setting a simple potential, we are able to easily calculate and verify the eignevalues that are found via the Jacobi rotation method \ref{}.  By setting a step length, \begin{equation}
+	h=\frac{\rho_{max}-\rho_{0}}{N}
+	\end{equation} where $\rho_{max}$ was set to 7.0, $\rho_{0}$ set to 0.0, and N the number of inputted mesh points, we should expect to find the same eignevalues for a given $N$.
+	
+		\begin{center}
+		\begin{tabular}{ccc}
+			\hline \hline
+			Mesh Points ($N$) &  Time$_{Jacobi}$ (sec) & Time$_{Armadillo}$ (sec)\\
+			\hline
+			2 & 0.00033 & 0.000044\\
+			5 & 0.00057 & 0.000087\\
+			8$^{\dagger}$ & 0.00107 & 0.000103\\
+			10 & 0.00136 & 0.000120\\
+			100 & 0.04778 & 0.001862\\
+			\hline
+			\label{timetable}
+		\end{tabular}
+		\captionof{table}{A time comparison between the Jacobi rotation and armadillo \cite{Armadillo} eigenvalue solvers.  The $\dagger$ represents the number of mesh points used to find the lowest three eigenvalues for the non-interacting case. }
+	\end{center}
+
+	Using a $N$ value of eight, we are able to find the first three lowest eigenvalues: 2.7405, 5.8654, and 9.6309.  Using the Jacobi rotation method, we find that the matrix goes through $N^{2}$ similarity transformations to get a matrix with zero\footnote{Zero to a certain approximation (i.e. $10^{-15}$ was set to zero).} non-diagonal matrix elements.
+
+
+	We were able to use Armadillo \cite{Armadillo}, to find the eigenvalues of the non-interacting case for the Schr$\ddot{\textrm{o}}$dinger equation to verify our results from the Jacobi rotation method. Both methods provided identical eigenvalues.  Using both methods, we were able to calculate the amount of time required to carry out the calculations (Table \ref{timetable}).
+	
+		
+
+	
+	\subsection{Interacting Case}
+	
+	We then progressed to the Coulomb interaction case for the Schr$\ddot{\textrm{o}}$dinger equation.  We now find that we can solve for the same Schr$\ddot{\textrm{o}}$dinger equation with a modified potential to account for the Coulomb interactions.  The interaction potential was found to be directly proporational to a coefficienct, $\omega_{r}$, that dictates strength of the oscillator potential.  Using the found energy-eigenvalue relationship, \begin{equation}
+	E=\frac{\hbar^{2}}{m\alpha^{2}}\lambda
+	\end{equation} where alpha is a fixed constant, we were able to determine the ground state energy for various $\omega_{r}$ (Table \ref{StateTable}).
+	
+	
+	
+	\begin{center}
+		\begin{tabular}{ccc}
+			\hline \hline
+			$\omega_{r}$ &  E$_{GS}^{1} (J)$ & E$_{GS}^{2} (J)$ \cite{PhysRevA.48.3561}\\
+			\hline
+			0.01 & 0.11063 & -- \\
+			$^{\star}$0.05 & 0.12310 & 0.1750\\
+			$^{\star}$0.25 & 0.53431 & 0.6250\\
+			0.5 & 0.54408 & --\\
+			1 & 0.96438 & -- \\
+			5 & 4.38549 & --\\
+			\hline
+			\label{StateTable}
+		\end{tabular}
+		\captionof{table}{Comparison between the ground state energy and $\omega_{r}$. E$_{GS}^{1} (J)$ are ground state energies found in the present work and E$_{GS}^{2} (J)$ are accepted values found in Ref. \cite{PhysRevA.48.3561}.  The $^{\star}$ indicates $\omega_{r}$ values that overlap with the accepted values in Ref. \cite{PhysRevA.48.3561}.  In order to get a good approximation to the accepted value, the ground state energy for $\omega_{r}=0.25$ was found using the second lowest eigenvalue.}
+	\end{center}
+
+
+	
+	
+	
+	\bibliography{Project2Bib}
+	\bibliographystyle{apsrev4-1}	
+	
+	
+	
+\end{document}

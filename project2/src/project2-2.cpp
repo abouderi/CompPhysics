@@ -42,7 +42,6 @@ double offdiag(mat &A , int &p, int &q, int n){
 void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
 {
   double s, c;
-  double t=0;
   if ( A(k,l) != 0.0 ) {
     double t, tau;
     tau = (A(l,l) - A(k,k))/(2*A(k,l));
@@ -82,9 +81,6 @@ void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
     R(i,k) = c*r_ik - s*r_il;
     R(i,l) = c*r_il + s*r_ik;
     
-    t=t+1;
-    
-     //cout << "Number of loops through Jacobi Rotation:" << t << endl;
    
   }
   return;
@@ -118,17 +114,22 @@ int main(int argc, char *argv[]){
     
     
     
-
+    clock_t start, finish;  //  declare start and final time
+    start = clock();
+    
+    srand(time(NULL));
     
     
     
     vec rho(n); vec V(n);
     
+    double omegr = 5;
+    
     //Defining Rho
     for(int i=0; i<n; i++){
         
         rho(i) = rho_min+(i+1)*h;
-        V(i) = rho(i)*rho(i);
+        V(i) = omegr*omegr*rho(i)*rho(i)+1/rho(i);
         
     }
     
@@ -149,10 +150,10 @@ int main(int argc, char *argv[]){
             
     }
     
-    vec vectorprior(n);
+        vec vectorprior(n);
         vec vectorprior2(n);
         
-        for(int y=0; y<n-1; y++){
+       for(int y=0; y<n-1; y++){
             //vectorprior(y) = A(y,0);
             if (A(y,0)<0.0){
                 vectorprior(y) = 0.0;
@@ -177,20 +178,15 @@ int main(int argc, char *argv[]){
         
         double w = dot(vectorprior,vectorprior);
         
-        cout << "Dot Product of Two Eigenvectors (Before Jacobian Trans): " << c << endl;
+        cout << "Dot Product of Two Eigenvectors: " << c << endl;
 
         
-        cout << "Dot Product of One Eigenvector (Before Jacobian Trans): " << w << endl;
+        cout << "Dot Product of One Eigenvector: " << w << endl;
     
     cout << "Matrix A initial:" << endl;
     cout << A << endl;
 
     mat A1 = A;
-    
-      clock_t start, finish;  //  declare start and final time
-    start = clock();
-    
-    srand(time(NULL));
     
     vec eigval;
 
@@ -198,10 +194,6 @@ int main(int argc, char *argv[]){
     
     cout << "Eigenvalues via Armadillo:" << endl;
     cout << eigval << endl;
-    
-            finish = clock();
-
-
 
     mat R = eye<mat>(n,n);
     
@@ -248,9 +240,9 @@ int main(int argc, char *argv[]){
             }
         }
         
-        cout << "Eigenvector One (After Jacobian Trans): " << endl;
+        cout << "Eigenvector One: " << endl;
         cout << vector << endl;
-        cout << "Eigenvector Two (After Jacobian Trans): " << endl;
+        cout << "Eigenvector Two: " << endl;
         cout << vector2 << endl;
         
         double x = dot(vector,vector2);
@@ -262,16 +254,10 @@ int main(int argc, char *argv[]){
         
         cout << "Dot Product of One Eigenvector (After Jacobian Trans): " << q << endl;
         
-   
-      cout << "Time:" << endl;
-    cout << ( (finish - start)/(double) CLOCKS_PER_SEC ) << endl;
+        
+
         
  
     return 0;
     
 }
-
-
-
- 
-
