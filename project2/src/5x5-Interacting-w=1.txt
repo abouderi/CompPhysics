@@ -1,0 +1,18 @@
+Matrix A (After Jacobi Rotation):
+   3.6478e+00   4.4531e-34  -9.4586e-26           0.   7.3739e-19
+   4.4531e-34   9.2375e+00  -8.1618e-18   3.0522e-21  -6.0286e-16
+  -9.4586e-26  -8.1618e-18   1.8906e+01  -6.0774e-13           0.
+           0.   3.0522e-21  -6.0774e-13   3.2563e+01   6.4043e-24
+   7.3739e-19  -6.0286e-16           0.   6.4043e-24   5.0178e+01
+
+Eigenvalues from Armadillo:
+    3.6478
+    9.2375
+   18.9063
+   32.5633
+   50.1780
+
+Dot Product of One Eigenvectors (Before Jacobian Trans):13.3065
+Dot Product of Two Eigenvectors (Before Jacobian Trans):5.73797E-33
+Dot Product of One Eigenvectors (After Jacobian Trans):13.6508
+Dot Product of Two Eigenvectors (After Jacobian Trans):0.00000

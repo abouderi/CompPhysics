@@ -123,7 +123,7 @@ int main(int argc, char *argv[]){
     
     vec rho(n); vec V(n);
     
-    double omegr = 5;
+    double omegr = 0.01;
     
     //Defining Rho
     for(int i=0; i<n; i++){
@@ -254,6 +254,24 @@ int main(int argc, char *argv[]){
         
         cout << "Dot Product of One Eigenvector (After Jacobian Trans): " << q << endl;
         
+        
+            ofstream myfile;
+    myfile.open ("20x20-Interacting-w=0.01.txt");
+      myfile << setiosflags(ios::showpoint | ios::uppercase);
+      
+      myfile << "Matrix A (After Jacobi Rotation):" << endl;
+         myfile << A << endl;
+         myfile << "Eigenvalues from Armadillo:" << endl;
+         myfile << eigval << endl;
+         myfile << "Dot Product of One Eigenvectors (Before Jacobian Trans):" << q << endl;
+         //myfile << q << endl;
+         myfile << "Dot Product of Two Eigenvectors (Before Jacobian Trans):" << x << endl;
+         //myfile << x << endl;
+         myfile << "Dot Product of One Eigenvectors (After Jacobian Trans):" << w << endl;
+         //myfile << w << endl;
+         myfile << "Dot Product of Two Eigenvectors (After Jacobian Trans):" << c << endl;
+         //myfile << c << endl;
+      myfile.close();
         
 
         

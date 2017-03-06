@@ -270,7 +270,7 @@ int main(int argc, char *argv[]){
     cout << ( (finish - start)/(double) CLOCKS_PER_SEC ) << endl;
     
     ofstream myfile;
-    myfile.open ("Test1.txt");
+    myfile.open ("20x20-Noninteracting.txt");
       myfile << setiosflags(ios::showpoint | ios::uppercase);
       
       myfile << "Matrix A (After Jacobi Rotation):" << endl;
@@ -279,12 +279,12 @@ int main(int argc, char *argv[]){
          myfile << eigval << endl;
          myfile << "Dot Product of One Eigenvectors (Before Jacobian Trans):" << q << endl;
          //myfile << q << endl;
-         myfile << "Dot Product of Two Eigenvectors (Before Jacobian Trans):" << endl;
-         myfile << x << endl;
-         myfile << "Dot Product of One Eigenvectors (After Jacobian Trans):" << endl;
-         myfile << w << endl;
-         myfile << "Dot Product of Two Eigenvectors (After Jacobian Trans):" << endl;
-         myfile << c << endl;
+         myfile << "Dot Product of Two Eigenvectors (Before Jacobian Trans):" << x << endl;
+         //myfile << x << endl;
+         myfile << "Dot Product of One Eigenvectors (After Jacobian Trans):" << w << endl;
+         //myfile << w << endl;
+         myfile << "Dot Product of Two Eigenvectors (After Jacobian Trans):" << c << endl;
+         //myfile << c << endl;
       myfile.close();
         
  
