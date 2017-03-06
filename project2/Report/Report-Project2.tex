@@ -411,7 +411,7 @@ We may implement our quanities into a full \verb|C++| algorithm that provides a 
 	Using a $N$ value of eight, we are able to find the first three lowest eigenvalues: 2.7405, 5.8654, and 9.6309.  Using the Jacobi rotation method, we find that the matrix goes through $N^{2}$ similarity transformations to get a matrix with zero\footnote{Zero to a certain approximation (i.e. $10^{-15}$ was set to zero).} non-diagonal matrix elements.
 
 
-	We were able to use Armadillo \cite{Armadillo}, to find the eigenvalues of the non-interacting case for the Schr$\ddot{\textrm{o}}$dinger equation to verify our results from the Jacobi rotation method. Both methods provided identical eigenvalues.  Using both methods, we were able to calculate the amount of time required to carry out the calculations (Table \ref{timetable}).  It may be observed that the Jocabi method produces results in a similar amount of time as the Armadillo equivalent for a low number of mesh points.  However, as the number of mesh points increases, the Jacobi method becomes less efficient.
+	We were able to use Armadillo \cite{Armadillo}, to find the eigenvalues of the non-interacting case for the Schr$\ddot{\textrm{o}}$dinger equation to verify our results from the Jacobi rotation method. Both methods provided identical eigenvalues.  Using both methods, we were able to calculate the amount of time required to carry out the calculations (Table \ref{timetable}).  It may be observed that the Jacobi method produces results in a similar amount of time as the Armadillo equivalent for a low number of mesh points.  However, as the number of mesh points increases, the Jacobi method becomes less efficient.
 	
 		
 \begin{figure}
