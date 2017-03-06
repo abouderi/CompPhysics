@@ -63,8 +63,8 @@ void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
   a_ll = A(l,l);
   A(k,k) = c*c*a_kk - 2.0*c*s*A(k,l) + s*s*a_ll;
   A(l,l) = s*s*a_kk + 2.0*c*s*A(k,l) + c*c*a_ll;
-  A(k,l) = 0.0;  // hard-coding non-diagonal elements by hand
-  A(l,k) = 0.0;  // same here
+  A(k,l) = 0.0;
+  A(l,k) = 0.0;
   for ( int i = 0; i < n; i++ ) {
     if ( i != k && i != l ) {
       a_ik = A(i,k);
@@ -74,7 +74,7 @@ void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
       A(i,l) = c*a_il + s*a_ik;
       A(l,i) = A(i,l);
     }
-//  And finally the new eigenvectors
+//  The new eigenvectors
     r_ik = R(i,k);
     r_il = R(i,l);
 
@@ -84,7 +84,7 @@ void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
    
   }
   return;
-} // end of function jacobi_rotate
+}
    
 
 

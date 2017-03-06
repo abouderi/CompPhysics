@@ -97,6 +97,9 @@ void Jacobi_rotate ( mat &A, mat &R, int k, int l, int n )
 
 
 int main(int argc, char *argv[]){
+    
+
+    
     int n = atoi(argv[1]);
    
     double rho_max = 7.0;
@@ -265,6 +268,24 @@ int main(int argc, char *argv[]){
    
       cout << "Time:" << endl;
     cout << ( (finish - start)/(double) CLOCKS_PER_SEC ) << endl;
+    
+    ofstream myfile;
+    myfile.open ("Test1.txt");
+      myfile << setiosflags(ios::showpoint | ios::uppercase);
+      
+      myfile << "Matrix A (After Jacobi Rotation):" << endl;
+         myfile << A << endl;
+         myfile << "Eigenvalues from Armadillo:" << endl;
+         myfile << eigval << endl;
+         myfile << "Dot Product of One Eigenvectors (Before Jacobian Trans):" << q << endl;
+         //myfile << q << endl;
+         myfile << "Dot Product of Two Eigenvectors (Before Jacobian Trans):" << endl;
+         myfile << x << endl;
+         myfile << "Dot Product of One Eigenvectors (After Jacobian Trans):" << endl;
+         myfile << w << endl;
+         myfile << "Dot Product of Two Eigenvectors (After Jacobian Trans):" << endl;
+         myfile << c << endl;
+      myfile.close();
         
  
     return 0;
