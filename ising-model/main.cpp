@@ -24,13 +24,13 @@ void read_input(int& n_spins, int& mcs, double& initial_temp, double& final_temp
     cout << "mcs:";
     cin >> mcs;
 
-    cout << "initial_temp:";
+    cout << "Initial Temp:";
     cin >> initial_temp;
 
-    cout << "final_temp:";
+    cout << "Final Temp:";
     cin >> final_temp;
 
-    cout << "temp_step:";
+    cout << "Temperature Step Size:";
     cin >> temp_step;
 };
 
@@ -138,17 +138,25 @@ for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
         average[2] += M; average[3] += M*M; average[4] += fabs(M);
     }
 // print results
-    output(n_spins, mcs, temp, average);
+   // output(n_spins, mcs, temp, average);
 ofile << "This is for run number " << integercounter << "" << endl;
-ofile << "n_spins: " << n_spins << endl;
-ofile << "mcs: " << mcs << endl;
-ofile << "temp: " << temp << endl;
-ofile << "average: " << *average << endl;
+ofile << "Number of Spins: " << n_spins << endl;
+ofile << "Monte Carlo Simulation Total: " << mcs << endl;
+ofile << "Temperature: " << temp << endl;
+ofile << "Average Energy: " << average[0] << endl;
+ofile << "Average Energy Squared: " << average[1] << endl;
+ofile << "Average Magnetization: " << average[2] << endl;
+ofile << "Average Magnetization Squared: " << average[3] << endl;
+ofile << "Absolute Average of Magnetization: " << average[4] << endl;
 ofile << "" << endl;
+
+
 
 integercounter = integercounter +1;
 
 }
+
+cout << "Computation Finished" << endl;
 
 free_matrix((void **) spin_matrix); // free memory
 ofile.close(); // close output file
