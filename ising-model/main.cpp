@@ -38,10 +38,19 @@ void read_input(int& n_spins, int& mcs, double& initial_temp, double& final_temp
 // Function to initialise energy, spin matrix and magnetization
 void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& M)
 {
+	
+
+	
     // setup spin matrix and intial magnetization
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
-        spin_matrix[y][x] = 1; // spin orientation for the ground state
+	 int random = rand( )%2;
+	double exponent = pow ( -1, random);
+	cout << "Random: " << 1*exponent << endl;
+
+	//cout << "This is the random number: " << endl;
+	//cout << random << endl;
+        spin_matrix[y][x] = 1*exponent; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
         }
     }
@@ -79,6 +88,7 @@ void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M,
                 M += (double) 2*spin_matrix[iy][ix];
                 E += (double) deltaE;
             }
+	//cout << "Delta E: " << deltaE << endl;
         }
     }
 } // end of Metropolis sampling over spins
@@ -131,6 +141,9 @@ for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
     initialize(n_spins, temp, spin_matrix, E, M);
 
 double normal = mcs;
+double spins = n_spins*n_spins;
+
+//cout << "Number of spins: " << n_spins*n_spins << endl;
 
     // start Monte Carlo computation
     for (int cycles = 1; cycles <= mcs; cycles++){
@@ -138,7 +151,11 @@ double normal = mcs;
         // update expectation values
         average[0] += E/normal; average[1] += E*E/normal;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
+	//cout << "Energy: " << E << endl;
+
     }
+
+
 
 
 
@@ -146,13 +163,13 @@ double normal = mcs;
 double kb = 1;
 
 double specificheat = 1/(kb*temp*temp)*(average[1]-average[0]*average[0]);
-double chi = 1/(kb*temp)*(average[3]-average[2]*average[2]);
+double chi = 1/(kb*temp)*(average[3]-average[4]*average[4]);
 
 
 // print results
    // output(n_spins, mcs, temp, average);
 
-
+if(integercounter == 1) ofile << "#####################################" << endl;
 ofile << "This is for run number " << integercounter << "!" << endl;
 ofile << "Number of Spins: " << n_spins << endl;
 ofile << "Monte Carlo Simulation Total: " << mcs << endl;
