@@ -1,0 +1,70 @@
+This is for run number 1!
+Number of Spins: 2
+Monte Carlo Simulation Total: 1000
+Temperature: 1
+Average Energy: -7.976
+Average Energy Squared: 63.808
+Average Magnetization: 3.992
+Average Magnetization Squared: 15.96
+Absolute Average of Magnetization: 3.992
+
+Specific Heat: 0.191424
+Susceptibility: 0.023936
+
+#####################################
+This is for run number 2!
+Number of Spins: 2
+Monte Carlo Simulation Total: 1000
+Temperature: 2
+Average Energy: -7.152
+Average Energy Squared: 57.344
+Average Magnetization: 0.62
+Average Magnetization Squared: 14.592
+Absolute Average of Magnetization: 3.716
+
+Specific Heat: 1.54822
+Susceptibility: 7.1038
+
+#####################################
+This is for run number 3!
+Number of Spins: 2
+Monte Carlo Simulation Total: 1000
+Temperature: 3
+Average Energy: -5.472
+Average Energy Squared: 44.032
+Average Magnetization: 0.646
+Average Magnetization Squared: 11.764
+Absolute Average of Magnetization: 3.138
+
+Specific Heat: 1.56547
+Susceptibility: 3.78223
+
+#####################################
+This is for run number 4!
+Number of Spins: 2
+Monte Carlo Simulation Total: 1000
+Temperature: 4
+Average Energy: -4.472
+Average Energy Squared: 36.928
+Average Magnetization: -0.158
+Average Magnetization Squared: 10.204
+Absolute Average of Magnetization: 2.83
+
+Specific Heat: 1.05808
+Susceptibility: 2.54476
+
+#####################################
+This is for run number 5!
+Number of Spins: 2
+Monte Carlo Simulation Total: 1000
+Temperature: 5
+Average Energy: -3.608
+Average Energy Squared: 30.016
+Average Magnetization: 0.066
+Average Magnetization Squared: 8.804
+Absolute Average of Magnetization: 2.562
+
+Specific Heat: 0.679933
+Susceptibility: 1.75993
+
+#####################################

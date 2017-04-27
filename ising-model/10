@@ -1,0 +1,110 @@
+This is for run number 1
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 0
+Average Energy: -10
+Average Energy Squared: 500
+Average Magnetization: 5
+Average Magnetization Squared: 125
+Absolute Average of Magnetization: 5
+
+This is for run number 2
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 1
+Average Energy: -9.52
+Average Energy Squared: 455.84
+Average Magnetization: 4.88
+Average Magnetization Squared: 119.24
+Absolute Average of Magnetization: 4.88
+
+This is for run number 3
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 2
+Average Energy: -9.04
+Average Energy Squared: 416.16
+Average Magnetization: 4.64
+Average Magnetization Squared: 109
+Absolute Average of Magnetization: 4.64
+
+This is for run number 4
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 3
+Average Energy: -4.48
+Average Energy Squared: 127.52
+Average Magnetization: 1.76
+Average Magnetization Squared: 38.12
+Absolute Average of Magnetization: 2.48
+
+This is for run number 5
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 4
+Average Energy: -6.48
+Average Energy Squared: 217.12
+Average Magnetization: 3.76
+Average Magnetization Squared: 72.36
+Absolute Average of Magnetization: 3.76
+
+This is for run number 6
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 5
+Average Energy: -2.72
+Average Energy Squared: 46.24
+Average Magnetization: 1.35308e-16
+Average Magnetization Squared: 12.84
+Absolute Average of Magnetization: 1.32
+
+This is for run number 7
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 6
+Average Energy: -1.92
+Average Energy Squared: 27.04
+Average Magnetization: -0.56
+Average Magnetization Squared: 15.56
+Absolute Average of Magnetization: 1.6
+
+This is for run number 8
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 7
+Average Energy: -1.92
+Average Energy Squared: 42.4
+Average Magnetization: 0.36
+Average Magnetization Squared: 17.8
+Absolute Average of Magnetization: 1.52
+
+This is for run number 9
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 8
+Average Energy: -1.2
+Average Energy Squared: 16.8
+Average Magnetization: 0.88
+Average Magnetization Squared: 16.2
+Absolute Average of Magnetization: 1.56
+
+This is for run number 10
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 9
+Average Energy: -0.96
+Average Energy Squared: 11.68
+Average Magnetization: -0.16
+Average Magnetization Squared: 4.2
+Absolute Average of Magnetization: 0.76
+
+This is for run number 11
+Number of Spins: 5
+Monte Carlo Simulation Total: 10
+Temperature: 10
+Average Energy: -0.48
+Average Energy Squared: 21.92
+Average Magnetization: 0.64
+Average Magnetization Squared: 8.52
+Absolute Average of Magnetization: 0.96
+

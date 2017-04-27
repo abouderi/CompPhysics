@@ -41,7 +41,7 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
     // setup spin matrix and intial magnetization
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
-        if (temp < 1.5) spin_matrix[y][x] = 1; // spin orientation for the ground state
+        spin_matrix[y][x] = 1; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
         }
     }
@@ -130,16 +130,30 @@ for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
     for( int i = 0; i < 5; i++) average[i] = 0.;
     initialize(n_spins, temp, spin_matrix, E, M);
 
+double normal = mcs;
+
     // start Monte Carlo computation
     for (int cycles = 1; cycles <= mcs; cycles++){
         Metropolis(n_spins, idum, spin_matrix, E, M, w);
         // update expectation values
-        average[0] += E; average[1] += E*E;
-        average[2] += M; average[3] += M*M; average[4] += fabs(M);
+        average[0] += E/normal; average[1] += E*E/normal;
+        average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
     }
+
+
+
+//define kb
+double kb = 1;
+
+double specificheat = 1/(kb*temp*temp)*(average[1]-average[0]*average[0]);
+double chi = 1/(kb*temp)*(average[3]-average[2]*average[2]);
+
+
 // print results
    // output(n_spins, mcs, temp, average);
-ofile << "This is for run number " << integercounter << "" << endl;
+
+
+ofile << "This is for run number " << integercounter << "!" << endl;
 ofile << "Number of Spins: " << n_spins << endl;
 ofile << "Monte Carlo Simulation Total: " << mcs << endl;
 ofile << "Temperature: " << temp << endl;
@@ -149,6 +163,10 @@ ofile << "Average Magnetization: " << average[2] << endl;
 ofile << "Average Magnetization Squared: " << average[3] << endl;
 ofile << "Absolute Average of Magnetization: " << average[4] << endl;
 ofile << "" << endl;
+ofile << "Specific Heat: " << specificheat << endl;
+ofile << "Susceptibility: " << chi << endl;
+ofile << "" << endl;
+ofile << "#####################################" << endl;
 
 
 
