@@ -112,7 +112,7 @@ int main(int argc, char* argv[])
     // Read in output file, abort if there are too few command-line arguments
     if( argc <= 1 ){
         cout << "Bad Usage: " << argv[0] <<
-        " read also output file on same line" << endl;
+        "read also output file on same line" << endl;
         exit(1);
     }
     else{
