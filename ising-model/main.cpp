@@ -41,6 +41,10 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 {
 	srand ( time(NULL) );
 
+
+
+
+
 	
     // setup spin matrix and intial magnetization
     for(int y =0; y < n_spins; y++) {
@@ -55,8 +59,15 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 	//cout << random << endl;
         spin_matrix[y][x] = 1*exponent; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
+
+
         }
     }
+
+
+
+
+
     // setup initial energy
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
@@ -70,6 +81,8 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 // The Metropolis algorithm
 void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w)
 {
+
+	
     // loop over all spins
         for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
@@ -102,6 +115,7 @@ void output(int n_spins, int mcs, double temp, double *average){
     cout << "temp:" << temp << endl;
     cout << "average:" << *average << endl;
 };
+
 
 
 
@@ -148,17 +162,38 @@ double spins = n_spins*n_spins;
 
 //cout << "Number of spins: " << n_spins*n_spins << endl;
 
+
+
+
+
+
+
+
     // start Monte Carlo computation
+	int matrixcounter = 0;
+
+ 	int **spin_before = 0;
+	int **spin_after = 0;
+
+
     for (int cycles = 1; cycles <= mcs; cycles++){
         Metropolis(n_spins, idum, spin_matrix, E, M, w);
         // update expectation values
+
+ 	spin_after = spin_before;
+ 	spin_before = spin_matrix;
+
+	if(spin_matrix == spin_after) matrixcounter = matrixcounter;
+		else matrixcounter=matrixcounter + 1;
+
+
         average[0] += E/normal; average[1] += E*E/normal;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
 	//cout << "Energy: " << E << endl;
 
     }
 
-
+	cout << matrixcounter << endl;
 
 
 
