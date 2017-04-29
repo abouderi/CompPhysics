@@ -79,10 +79,15 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 }// end function initialise
 
 // The Metropolis algorithm
-void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter)
+void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter, int&energycounter, int&babyenergycountern8, int&babyenergycountern4, int&babyenergycounter0, int&babyenergycounter4, int&babyenergycounter8)
 {
 
 int babymatrixcounter = 0;
+//int babyenergycountern8 = 0;
+//int babyenergycountern4 = 0;
+//int babyenergycounter0 = 0;
+//int babyenergycounter4 = 0;
+//int babyenergycounter8 = 0;
 
 	
     // loop over all spins
@@ -102,6 +107,12 @@ int babymatrixcounter = 0;
             // Here we perform the Metropolis test
                 if ( ran1(&idum) <= w[deltaE+8] ) {
 		babymatrixcounter = babymatrixcounter +1;
+			if(deltaE==-8) babyenergycountern8 = babyenergycountern8 +1;
+			if(deltaE==-4) babyenergycountern4 = babyenergycountern4 +1;
+			if(deltaE==0) babyenergycounter0 = babyenergycounter0 +1;
+			if(deltaE==4) babyenergycounter4 = babyenergycounter4 +1;
+			if(deltaE==8) babyenergycounter8 = babyenergycounter8 +1;
+		
                 spin_matrix[iy][ix] *= -1;
                 // flip one spin and accept new spin config
                 // update energy and magnetization
@@ -115,6 +126,8 @@ int babymatrixcounter = 0;
 
         }
     }
+	
+
 
 	if(babymatrixcounter>0){
 	matrixcounter = matrixcounter +1;
@@ -138,6 +151,11 @@ void output(int n_spins, int mcs, double temp, double *average){
 int main(int argc, char* argv[])
 {
 	int matrixcounter;
+	int babyenergycountern8;
+	int babyenergycountern4;
+	int babyenergycounter0;
+	int babyenergycounter4;
+	int babyenergycounter8;
 	int energycounter;
     char *outfilename;
     long idum;
@@ -165,6 +183,7 @@ double integercounter = 1;
 for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
     // initialise energy and magnetization
     matrixcounter = 0;
+    energycounter = 0;
     E = M = 0.;
 
     // setup array for possible energy changes
@@ -197,7 +216,7 @@ double spins = n_spins*n_spins;
 	if(cycles == 1) int matrixcounter = 0;
 	if(cycles == 1) int energycounter = 0;
 	
-        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter);
+        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter, energycounter, babyenergycountern8, babyenergycountern4, babyenergycounter0, babyenergycounter4, babyenergycounter8);
         // update expectation values
 	
 
@@ -205,14 +224,7 @@ double spins = n_spins*n_spins;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
 	//cout << "Energy: " << E << endl;
 	
-	if(average[0]>0){
-	for(int i=0; i<800; i=i+4){
-	 if(average[0]<i) energycounter = energycounter +1;
-		}
 
-	cout << energycounter << endl;
-
-	} 
     } 
 
 
@@ -228,7 +240,7 @@ double chi = 1/(kb*temp)*(average[3]-average[4]*average[4]);
 // print results
    // output(n_spins, mcs, temp, average);
 
-
+int totalenergycounts = babyenergycountern8 + babyenergycountern4 + babyenergycounter0 + babyenergycounter4 + babyenergycounter8;
 
 if(integercounter == 1) ofile << "#####################################" << endl;
 ofile << "This is for run number " << integercounter << "!" << endl;
@@ -245,6 +257,13 @@ ofile << "Specific Heat: " << specificheat << endl;
 ofile << "Susceptibility: " << chi << endl;
 ofile << "" << endl;
 ofile << "There were " << matrixcounter << " different matrices produced." << endl;
+ofile << "" << endl;
+ofile << "The variance in E: " << average[1]-average[0]*average[0] << endl;
+ofile << "The probability of the energy being -8 is: " << babyenergycountern8/(1.*totalenergycounts) << endl;
+ofile << "The probability of the energy being -4 is: " << babyenergycountern4/(1.*totalenergycounts) << endl;
+ofile << "The probability of the energy being 0 is: " << babyenergycounter0/(1.*totalenergycounts) << endl;
+ofile << "The probability of the energy being 4 is: " << babyenergycounter4/(1.*totalenergycounts) << endl;
+ofile << "The probability of the energy being 8 is: " << babyenergycounter8/(1.*totalenergycounts) << endl;
 ofile << "#####################################" << endl;
 
 
