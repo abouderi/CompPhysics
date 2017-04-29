@@ -57,7 +57,7 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 
 	//cout << "This is the random number: " << endl;
 	//cout << random << endl;
-        spin_matrix[y][x] = 1*exponent; // spin orientation for the ground state
+        spin_matrix[y][x] = 1; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
 
 
@@ -79,8 +79,10 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 }// end function initialise
 
 // The Metropolis algorithm
-void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w)
+void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter)
 {
+
+int babymatrixcounter = 0;
 
 	
     // loop over all spins
@@ -96,17 +98,30 @@ void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M,
             spin_matrix[iy][periodic(ix,n_spins,1)] +
             spin_matrix[periodic(iy,n_spins,1)][ix]);
 
+
             // Here we perform the Metropolis test
                 if ( ran1(&idum) <= w[deltaE+8] ) {
+		babymatrixcounter = babymatrixcounter +1;
                 spin_matrix[iy][ix] *= -1;
                 // flip one spin and accept new spin config
                 // update energy and magnetization
                 M += (double) 2*spin_matrix[iy][ix];
                 E += (double) deltaE;
+
             }
 	//cout << "Delta E: " << deltaE << endl;
+
+
+
         }
     }
+
+	if(babymatrixcounter>0){
+	matrixcounter = matrixcounter +1;
+	//cout << matrixcounter << endl;
+	}
+
+
 } // end of Metropolis sampling over spins
 
 void output(int n_spins, int mcs, double temp, double *average){
@@ -122,6 +137,7 @@ void output(int n_spins, int mcs, double temp, double *average){
 // main program
 int main(int argc, char* argv[])
 {
+	int matrixcounter;
     char *outfilename;
     long idum;
     int **spin_matrix, n_spins, mcs;
@@ -147,6 +163,7 @@ idum = -1; // random starting point
 double integercounter = 1;
 for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
     // initialise energy and magnetization
+    matrixcounter = 0;
     E = M = 0.;
 
     // setup array for possible energy changes
@@ -160,6 +177,8 @@ for (double temp = initial_temp; temp <= final_temp; temp+=temp_step){
 double normal = mcs;
 double spins = n_spins*n_spins;
 
+
+
 //cout << "Number of spins: " << n_spins*n_spins << endl;
 
 
@@ -170,22 +189,15 @@ double spins = n_spins*n_spins;
 
 
     // start Monte Carlo computation
-	int matrixcounter = 0;
-
- 	int **spin_before = 0;
-	int **spin_after = 0;
 
 
     for (int cycles = 1; cycles <= mcs; cycles++){
-        Metropolis(n_spins, idum, spin_matrix, E, M, w);
+
+	if(cycles == 1) int matrixcounter = 0;
+	
+        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter);
         // update expectation values
-
- 	spin_after = spin_before;
- 	spin_before = spin_matrix;
-
-	if(spin_matrix == spin_after) matrixcounter = matrixcounter;
-		else matrixcounter=matrixcounter + 1;
-
+	
 
         average[0] += E/normal; average[1] += E*E/normal;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
@@ -193,7 +205,6 @@ double spins = n_spins*n_spins;
 
     }
 
-	cout << matrixcounter << endl;
 
 
 
@@ -206,6 +217,8 @@ double chi = 1/(kb*temp)*(average[3]-average[4]*average[4]);
 
 // print results
    // output(n_spins, mcs, temp, average);
+
+
 
 if(integercounter == 1) ofile << "#####################################" << endl;
 ofile << "This is for run number " << integercounter << "!" << endl;
@@ -221,6 +234,7 @@ ofile << "" << endl;
 ofile << "Specific Heat: " << specificheat << endl;
 ofile << "Susceptibility: " << chi << endl;
 ofile << "" << endl;
+ofile << "There were " << matrixcounter << " difference matrices produced." << endl;
 ofile << "#####################################" << endl;
 
 

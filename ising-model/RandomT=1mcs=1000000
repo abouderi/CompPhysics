@@ -3,13 +3,14 @@ This is for run number 1!
 Number of Spins: 20
 Monte Carlo Simulation Total: 1000000
 Temperature: 1
-Average Energy: -798.855
-Average Energy Squared: 638180
-Average Magnetization: 399.7
-Average Magnetization Squared: 159763
-Absolute Average of Magnetization: 399.7
+Average Energy: -798.857
+Average Energy Squared: 638183
+Average Magnetization: -399.705
+Average Magnetization Squared: 159766
+Absolute Average of Magnetization: 399.705
 
-Specific Heat: 10.5446
-Susceptibility: 3.11699
+Specific Heat: 10.246
+Susceptibility: 1.47857
 
+There were 203674 difference matrices produced.
 #####################################
