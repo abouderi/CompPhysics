@@ -53,7 +53,7 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 
 	//cout << "This is the random number: " << endl;
 	//cout << random << endl;
-        spin_matrix[y][x] = 1; // spin orientation for the ground state
+        spin_matrix[y][x] = 1*exponent; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
         }
     }
