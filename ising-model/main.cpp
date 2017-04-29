@@ -138,6 +138,7 @@ void output(int n_spins, int mcs, double temp, double *average){
 int main(int argc, char* argv[])
 {
 	int matrixcounter;
+	int energycounter;
     char *outfilename;
     long idum;
     int **spin_matrix, n_spins, mcs;
@@ -203,7 +204,7 @@ double spins = n_spins*n_spins;
         average[0] += E/normal; average[1] += E*E/normal;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
 	//cout << "Energy: " << E << endl;
-	/*
+	
 	if(average[0]>0){
 	for(int i=0; i<800; i=i+4){
 	 if(average[0]<i) energycounter = energycounter +1;
@@ -211,7 +212,7 @@ double spins = n_spins*n_spins;
 
 	cout << energycounter << endl;
 
-	} */
+	} 
     } 
 
 
