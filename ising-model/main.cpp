@@ -8,6 +8,7 @@ Metropolis sampling is used. Periodic boundary conditions.
 #include <fstream>
 #include <iomanip>
 #include "lib.h"
+#include <ctime>
 using namespace std;
 ofstream ofile;
 
@@ -38,19 +39,21 @@ void read_input(int& n_spins, int& mcs, double& initial_temp, double& final_temp
 // Function to initialise energy, spin matrix and magnetization
 void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& M)
 {
-	
+	srand ( time(NULL) );
 
 	
     // setup spin matrix and intial magnetization
     for(int y =0; y < n_spins; y++) {
         for (int x= 0; x < n_spins; x++){
+
+	
 	 int random = rand( )%2;
-	double exponent = pow ( -1, random);
-	cout << "Random: " << 1*exponent << endl;
+	double exponent = pow ( -1, rand( )%2);
+	//cout << "Random: " << 1*exponent << endl;
 
 	//cout << "This is the random number: " << endl;
 	//cout << random << endl;
-        spin_matrix[y][x] = 1*exponent; // spin orientation for the ground state
+        spin_matrix[y][x] = 1; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
         }
     }
