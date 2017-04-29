@@ -194,6 +194,7 @@ double spins = n_spins*n_spins;
     for (int cycles = 1; cycles <= mcs; cycles++){
 
 	if(cycles == 1) int matrixcounter = 0;
+	if(cycles == 1) int energycounter = 0;
 	
         Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter);
         // update expectation values
@@ -202,8 +203,16 @@ double spins = n_spins*n_spins;
         average[0] += E/normal; average[1] += E*E/normal;
         average[2] += M/normal; average[3] += M*M/normal; average[4] += fabs(M/normal);
 	//cout << "Energy: " << E << endl;
+	/*
+	if(average[0]>0){
+	for(int i=0; i<800; i=i+4){
+	 if(average[0]<i) energycounter = energycounter +1;
+		}
 
-    }
+	cout << energycounter << endl;
+
+	} */
+    } 
 
 
 
@@ -234,7 +243,7 @@ ofile << "" << endl;
 ofile << "Specific Heat: " << specificheat << endl;
 ofile << "Susceptibility: " << chi << endl;
 ofile << "" << endl;
-ofile << "There were " << matrixcounter << " difference matrices produced." << endl;
+ofile << "There were " << matrixcounter << " different matrices produced." << endl;
 ofile << "#####################################" << endl;
 
 
