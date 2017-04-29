@@ -1,23 +1,25 @@
 #####################################
 This is for run number 1!
 Number of Spins: 20
-Monte Carlo Simulation Total: 1000
+Monte Carlo Simulation Total: 10000
 Temperature: 1
-Average Energy: -798.684
-Average Energy Squared: 637907
-Average Magnetization: 399.662
-Average Magnetization Squared: 159730
-Absolute Average of Magnetization: 399.662
+Average Energy: -798.823
+Average Energy Squared: 638127
+Average Magnetization: 399.699
+Average Magnetization Squared: 159760
+Absolute Average of Magnetization: 399.699
 
-Specific Heat: 10.7321
-Susceptibility: 0.737756
+Specific Heat: 9.6334
+Susceptibility: 0.65164
 
-There were 244 different matrices produced.
+There were 2139 different matrices produced.
 
-The variance in E: 10.7321
-The probability of the energy being -8 is: 0.460894
-The probability of the energy being -4 is: 0.0335196
-The probability of the energy being 0 is: 0.00837989
-The probability of the energy being 4 is: 0.0391061
-The probability of the energy being 8 is: 0.458101
+The variance in E: 9.6334
+Counter 800: 1228
+Counter 796: 0
+Counter 792: 1480
+Counter 788: 96
+Counter 784: 206
+Counter 780: 24
+Counter 776: 13
 #####################################

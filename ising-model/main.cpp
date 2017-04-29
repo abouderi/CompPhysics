@@ -57,7 +57,7 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 
 	//cout << "This is the random number: " << endl;
 	//cout << random << endl;
-        spin_matrix[y][x] = 1; // spin orientation for the ground state
+        spin_matrix[y][x] = exponent; // spin orientation for the ground state
         M += (double) spin_matrix[y][x];
 
 
@@ -79,15 +79,11 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 }// end function initialise
 
 // The Metropolis algorithm
-void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter, int&energycounter, int&babyenergycountern8, int&babyenergycountern4, int&babyenergycounter0, int&babyenergycounter4, int&babyenergycounter8)
+void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter, int&energycounter, int&counter800, int&counter796, int&counter792, int&counter788, int&counter784, int&counter780, int&counter776)
 {
 
 int babymatrixcounter = 0;
-//int babyenergycountern8 = 0;
-//int babyenergycountern4 = 0;
-//int babyenergycounter0 = 0;
-//int babyenergycounter4 = 0;
-//int babyenergycounter8 = 0;
+
 
 	
     // loop over all spins
@@ -106,18 +102,27 @@ int babymatrixcounter = 0;
 
             // Here we perform the Metropolis test
                 if ( ran1(&idum) <= w[deltaE+8] ) {
-		babymatrixcounter = babymatrixcounter +1;
-			if(deltaE==-8) babyenergycountern8 = babyenergycountern8 +1;
-			if(deltaE==-4) babyenergycountern4 = babyenergycountern4 +1;
-			if(deltaE==0) babyenergycounter0 = babyenergycounter0 +1;
-			if(deltaE==4) babyenergycounter4 = babyenergycounter4 +1;
-			if(deltaE==8) babyenergycounter8 = babyenergycounter8 +1;
-		
+		babymatrixcounter = babymatrixcounter +1;		
                 spin_matrix[iy][ix] *= -1;
                 // flip one spin and accept new spin config
                 // update energy and magnetization
                 M += (double) 2*spin_matrix[iy][ix];
                 E += (double) deltaE;
+
+			if(E >= -800) if(E<-796) counter800 = counter800 + 1;
+			if(E == -796) counter796 = counter796 +1;
+			if(E == -792) counter792 = counter792 +1;
+			if(E == -788) counter788 = counter788 +1;
+			if(E == -784) counter784 = counter784 +1;
+			if(E == -780) counter780 = counter780 +1;
+			if(E == -776) counter776 = counter776 +1;
+			//if(E < -800) cout << E << endl;
+
+			/*if(E < -784){
+				if(E > -800){
+					cout << E << endl;
+				}
+			} */
 
             }
 	//cout << "Delta E: " << deltaE << endl;
@@ -151,12 +156,14 @@ void output(int n_spins, int mcs, double temp, double *average){
 int main(int argc, char* argv[])
 {
 	int matrixcounter;
-	int babyenergycountern8;
-	int babyenergycountern4;
-	int babyenergycounter0;
-	int babyenergycounter4;
-	int babyenergycounter8;
 	int energycounter;
+	int counter800;
+ 	int counter796;
+	int counter792;
+	int counter788;
+	int counter784;
+	int counter780;
+	int counter776;
     char *outfilename;
     long idum;
     int **spin_matrix, n_spins, mcs;
@@ -216,7 +223,7 @@ double spins = n_spins*n_spins;
 	if(cycles == 1) int matrixcounter = 0;
 	if(cycles == 1) int energycounter = 0;
 	
-        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter, energycounter, babyenergycountern8, babyenergycountern4, babyenergycounter0, babyenergycounter4, babyenergycounter8);
+        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter, energycounter, counter800, counter796, counter792, counter788, counter784, counter780, counter776);
         // update expectation values
 	
 
@@ -240,8 +247,6 @@ double chi = 1/(kb*temp)*(average[3]-average[4]*average[4]);
 // print results
    // output(n_spins, mcs, temp, average);
 
-int totalenergycounts = babyenergycountern8 + babyenergycountern4 + babyenergycounter0 + babyenergycounter4 + babyenergycounter8;
-
 if(integercounter == 1) ofile << "#####################################" << endl;
 ofile << "This is for run number " << integercounter << "!" << endl;
 ofile << "Number of Spins: " << n_spins << endl;
@@ -258,12 +263,7 @@ ofile << "Susceptibility: " << chi << endl;
 ofile << "" << endl;
 ofile << "There were " << matrixcounter << " different matrices produced." << endl;
 ofile << "" << endl;
-ofile << "The variance in E: " << average[1]-average[0]*average[0] << endl;
-ofile << "The probability of the energy being -8 is: " << babyenergycountern8/(1.*totalenergycounts) << endl;
-ofile << "The probability of the energy being -4 is: " << babyenergycountern4/(1.*totalenergycounts) << endl;
-ofile << "The probability of the energy being 0 is: " << babyenergycounter0/(1.*totalenergycounts) << endl;
-ofile << "The probability of the energy being 4 is: " << babyenergycounter4/(1.*totalenergycounts) << endl;
-ofile << "The probability of the energy being 8 is: " << babyenergycounter8/(1.*totalenergycounts) << endl;
+ofile << "The variance in E is: " << average[1]-average[0]*average[0] << endl;
 ofile << "#####################################" << endl;
 
 

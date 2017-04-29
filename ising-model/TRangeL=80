@@ -1,0 +1,120 @@
+#####################################
+This is for run number 1!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.1
+Average Energy: -10594.6
+Average Energy Squared: 1.12327e+08
+Average Magnetization: -5424.32
+Average Magnetization Squared: 2.9783e+07
+Absolute Average of Magnetization: 5424.32
+
+Specific Heat: 18359.4
+Susceptibility: 171342
+
+There were 10000 different matrices produced.
+
+The variance in E is: 80965.1
+#####################################
+This is for run number 2!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.15
+Average Energy: -10121.3
+Average Energy Squared: 1.02568e+08
+Average Magnetization: -3831.83
+Average Magnetization Squared: 2.19267e+07
+Absolute Average of Magnetization: 4373.99
+
+Specific Heat: 27518
+Susceptibility: 1.29998e+06
+
+There were 10000 different matrices produced.
+
+The variance in E is: 127202
+#####################################
+This is for run number 3!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.2
+Average Energy: -9823.85
+Average Energy Squared: 9.65975e+07
+Average Magnetization: 4674.9
+Average Magnetization Squared: 2.2737e+07
+Absolute Average of Magnetization: 4674.97
+
+Specific Heat: 18506.7
+Susceptibility: 400751
+
+There were 10000 different matrices produced.
+
+The variance in E is: 89572.5
+#####################################
+This is for run number 4!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.25
+Average Energy: -9309.95
+Average Energy Squared: 8.67822e+07
+Average Magnetization: -3997.32
+Average Magnetization Squared: 1.75694e+07
+Absolute Average of Magnetization: 4010.08
+
+Specific Heat: 21153.1
+Susceptibility: 661613
+
+There were 10000 different matrices produced.
+
+The variance in E is: 107088
+#####################################
+This is for run number 5!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.3
+Average Energy: -8703.46
+Average Energy Squared: 7.5838e+07
+Average Magnetization: 2522.9
+Average Magnetization Squared: 9.24602e+06
+Absolute Average of Magnetization: 2729.01
+
+Specific Heat: 16609.5
+Susceptibility: 781980
+
+There were 10000 different matrices produced.
+
+The variance in E is: 87864.1
+#####################################
+This is for run number 6!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.35
+Average Energy: -8094.84
+Average Energy Squared: 6.55768e+07
+Average Magnetization: 242.198
+Average Magnetization Squared: 1.91853e+06
+Absolute Average of Magnetization: 1163.19
+
+Specific Heat: 9120
+Susceptibility: 240650
+
+There were 10000 different matrices produced.
+
+The variance in E is: 50365.2
+#####################################
+This is for run number 7!
+Number of Spins: 80
+Monte Carlo Simulation Total: 10000
+Temperature: 2.4
+Average Energy: -7683.17
+Average Energy Squared: 5.90739e+07
+Average Magnetization: -236.982
+Average Magnetization Squared: 943289
+Absolute Average of Magnetization: 798.175
+
+Specific Heat: 7440.66
+Susceptibility: 127585
+
+There were 10000 different matrices produced.
+
+The variance in E is: 42858.2
+#####################################
