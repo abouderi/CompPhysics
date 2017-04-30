@@ -79,7 +79,7 @@ void initialize(int n_spins, double temp, int **spin_matrix, double& E, double& 
 }// end function initialise
 
 // The Metropolis algorithm
-void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter, int&energycounter, int&counter800, int&counter796, int&counter792, int&counter788, int&counter784, int&counter780, int&counter776)
+void Metropolis(int n_spins, long& idum, int **spin_matrix, double& E, double&M, double *w, int&matrixcounter, int&energycounter)
 {
 
 int babymatrixcounter = 0;
@@ -109,20 +109,6 @@ int babymatrixcounter = 0;
                 M += (double) 2*spin_matrix[iy][ix];
                 E += (double) deltaE;
 
-			if(E >= -800) if(E<-796) counter800 = counter800 + 1;
-			if(E == -796) counter796 = counter796 +1;
-			if(E == -792) counter792 = counter792 +1;
-			if(E == -788) counter788 = counter788 +1;
-			if(E == -784) counter784 = counter784 +1;
-			if(E == -780) counter780 = counter780 +1;
-			if(E == -776) counter776 = counter776 +1;
-			//if(E < -800) cout << E << endl;
-
-			/*if(E < -784){
-				if(E > -800){
-					cout << E << endl;
-				}
-			} */
 
             }
 	//cout << "Delta E: " << deltaE << endl;
@@ -157,13 +143,6 @@ int main(int argc, char* argv[])
 {
 	int matrixcounter;
 	int energycounter;
-	int counter800;
- 	int counter796;
-	int counter792;
-	int counter788;
-	int counter784;
-	int counter780;
-	int counter776;
     char *outfilename;
     long idum;
     int **spin_matrix, n_spins, mcs;
@@ -223,7 +202,7 @@ double spins = n_spins*n_spins;
 	if(cycles == 1) int matrixcounter = 0;
 	if(cycles == 1) int energycounter = 0;
 	
-        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter, energycounter, counter800, counter796, counter792, counter788, counter784, counter780, counter776);
+        Metropolis(n_spins, idum, spin_matrix, E, M, w, matrixcounter, energycounter);
         // update expectation values
 	
 
@@ -246,7 +225,10 @@ double chi = 1/(kb*temp)*(average[3]-average[4]*average[4]);
 
 // print results
    // output(n_spins, mcs, temp, average);
-
+/*
+if(integercounter == 1) ofile << "Temperature " << "," << " Average Energy " << "," << " Average Abs Magnetization " << "," << " Specific Heat " << "," << " Susceptibility" << endl;
+ofile << temp << "," << average[0] << "," << average[4] << "," << specificheat << "," << chi << endl;
+*/
 if(integercounter == 1) ofile << "#####################################" << endl;
 ofile << "This is for run number " << integercounter << "!" << endl;
 ofile << "Number of Spins: " << n_spins << endl;
@@ -265,7 +247,6 @@ ofile << "There were " << matrixcounter << " different matrices produced." << en
 ofile << "" << endl;
 ofile << "The variance in E is: " << average[1]-average[0]*average[0] << endl;
 ofile << "#####################################" << endl;
-
 
 
 integercounter = integercounter +1;

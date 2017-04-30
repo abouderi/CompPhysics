@@ -1,0 +1,381 @@
+SciDAVis 1.14.0 project file
+<scripting-lang>	muParser
+<windows>	2
+<table>
+30862
+<table creation_time="1917-29-04 18:57:00:000" caption_spec="%n%C{ - }%c" name="Table1" columns="17" rows="30"><comment><![CDATA[]]></comment><column creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="Temperature" type="TypeDouble" mode="Numeric" plot_designation="X"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.1000000000000001e+00</row><row type="TypeDouble" index="1" invalid="no">2.1200000000000001e+00</row><row type="TypeDouble" index="2" invalid="no">2.1400000000000001e+00</row><row type="TypeDouble" index="3" invalid="no">2.1600000000000001e+00</row><row type="TypeDouble" index="4" invalid="no">2.1800000000000002e+00</row><row type="TypeDouble" index="5" invalid="no">2.2000000000000002e+00</row><row type="TypeDouble" index="6" invalid="no">2.2200000000000002e+00</row><row type="TypeDouble" index="7" invalid="no">2.2400000000000002e+00</row><row type="TypeDouble" index="8" invalid="no">2.2599999999999998e+00</row><row type="TypeDouble" index="9" invalid="no">2.2799999999999998e+00</row><row type="TypeDouble" index="10" invalid="no">2.2999999999999998e+00</row><row type="TypeDouble" index="11" invalid="no">2.3199999999999998e+00</row><row type="TypeDouble" index="12" invalid="no">2.3399999999999999e+00</row><row type="TypeDouble" index="13" invalid="no">2.3599999999999999e+00</row><row type="TypeDouble" index="14" invalid="no">2.3799999999999999e+00</row></column><column creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="L=20 Energy Expectation" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:57:14:316" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.6375375000000001e+00</row><row type="TypeDouble" index="1" invalid="no">-1.6242624999999999e+00</row><row type="TypeDouble" index="2" invalid="no">-1.6162624999999999e+00</row><row type="TypeDouble" index="3" invalid="no">-1.5855937499999999e+00</row><row type="TypeDouble" index="4" invalid="no">-1.5690999999999999e+00</row><row type="TypeDouble" index="5" invalid="no">-1.5391437500000000e+00</row><row type="TypeDouble" index="6" invalid="no">-1.5172187500000001e+00</row><row type="TypeDouble" index="7" invalid="no">-1.4886500000000000e+00</row><row type="TypeDouble" index="8" invalid="no">-1.4501250000000001e+00</row><row type="TypeDouble" index="9" invalid="no">-1.4117124999999999e+00</row><row type="TypeDouble" index="10" invalid="no">-1.3763937500000001e+00</row><row type="TypeDouble" index="11" invalid="no">-1.3258437500000000e+00</row><row type="TypeDouble" index="12" invalid="no">-1.3004187500000000e+00</row><row type="TypeDouble" index="13" invalid="no">-1.2622937500000000e+00</row><row type="TypeDouble" index="14" invalid="no">-1.2381187499999999e+00</row></column><column creation_time="2017-29-04 18:57:55:301" caption_spec="%n%C{ - }%c" name="L=20 Magnetization Expect" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:57:55:301" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:57:55:301" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.8209375000000003e-01</row><row type="TypeDouble" index="1" invalid="no">7.9766250000000005e-01</row><row type="TypeDouble" index="2" invalid="no">8.3305625000000005e-01</row><row type="TypeDouble" index="3" invalid="no">7.9111250000000000e-01</row><row type="TypeDouble" index="4" invalid="no">7.8721874999999997e-01</row><row type="TypeDouble" index="5" invalid="no">7.5946875000000003e-01</row><row type="TypeDouble" index="6" invalid="no">7.5860625000000004e-01</row><row type="TypeDouble" index="7" invalid="no">7.2455000000000003e-01</row><row type="TypeDouble" index="8" invalid="no">6.7758750000000001e-01</row><row type="TypeDouble" index="9" invalid="no">6.0062562500000005e-01</row><row type="TypeDouble" index="10" invalid="no">5.6558249999999999e-01</row><row type="TypeDouble" index="11" invalid="no">4.3074125000000002e-01</row><row type="TypeDouble" index="12" invalid="no">4.0590625000000002e-01</row><row type="TypeDouble" index="13" invalid="no">3.6201624999999998e-01</row><row type="TypeDouble" index="14" invalid="no">3.1069562499999998e-01</row></column><column creation_time="2017-29-04 18:57:57:945" caption_spec="%n%C{ - }%c" name="L=20 Specific Heat" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:57:57:945" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:57:57:945" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.3937374999999999e+00</row><row type="TypeDouble" index="1" invalid="no">2.1301999999999999e+00</row><row type="TypeDouble" index="2" invalid="no">1.4112374999999999e+00</row><row type="TypeDouble" index="3" invalid="no">1.7999000000000001e+00</row><row type="TypeDouble" index="4" invalid="no">1.8359375000000000e+00</row><row type="TypeDouble" index="5" invalid="no">1.9765812500000000e+00</row><row type="TypeDouble" index="6" invalid="no">1.6876125000000000e+00</row><row type="TypeDouble" index="7" invalid="no">1.8228187499999999e+00</row><row type="TypeDouble" index="8" invalid="no">1.7959750000000001e+00</row><row type="TypeDouble" index="9" invalid="no">2.2149812500000001e+00</row><row type="TypeDouble" index="10" invalid="no">2.0032500000000000e+00</row><row type="TypeDouble" index="11" invalid="no">1.9165937500000001e+00</row><row type="TypeDouble" index="12" invalid="no">1.7842562500000001e+00</row><row type="TypeDouble" index="13" invalid="no">1.5814750000000000e+00</row><row type="TypeDouble" index="14" invalid="no">1.3287062500000000e+00</row></column><column creation_time="2017-29-04 18:58:00:035" caption_spec="%n%C{ - }%c" name="L=20 Susceptibility" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:58:00:035" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:58:00:035" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.1040750000000003e+01</row><row type="TypeDouble" index="1" invalid="no">2.5079750000000001e+01</row><row type="TypeDouble" index="2" invalid="no">4.6421124999999996e+00</row><row type="TypeDouble" index="3" invalid="no">1.6174437500000000e+01</row><row type="TypeDouble" index="4" invalid="no">1.2489875000000000e+01</row><row type="TypeDouble" index="5" invalid="no">1.4085187500000000e+01</row><row type="TypeDouble" index="6" invalid="no">6.2762500000000001e+00</row><row type="TypeDouble" index="7" invalid="no">1.0912625000000000e+01</row><row type="TypeDouble" index="8" invalid="no">1.4742125000000000e+01</row><row type="TypeDouble" index="9" invalid="no">3.0422625000000000e+01</row><row type="TypeDouble" index="10" invalid="no">2.0146249999999998e+01</row><row type="TypeDouble" index="11" invalid="no">3.5126437500000002e+01</row><row type="TypeDouble" index="12" invalid="no">3.1680250000000001e+01</row><row type="TypeDouble" index="13" invalid="no">2.3613687500000001e+01</row><row type="TypeDouble" index="14" invalid="no">2.4240437499999999e+01</row></column><column creation_time="2017-29-04 18:59:49:466" caption_spec="%n%C{ - }%c" name="L=40 Energy Expectation" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:59:49:466" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:59:49:466" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.6477666670000000e+00</row><row type="TypeDouble" index="1" invalid="no">-1.6287888890000000e+00</row><row type="TypeDouble" index="2" invalid="no">-1.5966250000000000e+00</row><row type="TypeDouble" index="3" invalid="no">-1.5677083329999999e+00</row><row type="TypeDouble" index="4" invalid="no">-1.5683444440000001e+00</row><row type="TypeDouble" index="5" invalid="no">-1.5371166670000000e+00</row><row type="TypeDouble" index="6" invalid="no">-1.5159861109999999e+00</row><row type="TypeDouble" index="7" invalid="no">-1.4813499999999999e+00</row><row type="TypeDouble" index="8" invalid="no">-1.4492888890000000e+00</row><row type="TypeDouble" index="9" invalid="no">-1.3930111110000001e+00</row><row type="TypeDouble" index="10" invalid="no">-1.3739666669999999e+00</row><row type="TypeDouble" index="11" invalid="no">-1.3162305560000001e+00</row><row type="TypeDouble" index="12" invalid="no">-1.2878388890000001e+00</row><row type="TypeDouble" index="13" invalid="no">-1.2532833329999999e+00</row><row type="TypeDouble" index="14" invalid="no">-1.2345722219999999e+00</row></column><column creation_time="2017-29-04 18:59:54:756" caption_spec="%n%C{ - }%c" name="L=40 Magnetization Expect" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:59:54:756" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:59:54:756" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">8.1471111100000004e-01</row><row type="TypeDouble" index="1" invalid="no">8.0088333300000003e-01</row><row type="TypeDouble" index="2" invalid="no">7.2439166700000002e-01</row><row type="TypeDouble" index="3" invalid="no">6.9094166700000004e-01</row><row type="TypeDouble" index="4" invalid="no">7.9007777800000001e-01</row><row type="TypeDouble" index="5" invalid="no">7.2879444400000004e-01</row><row type="TypeDouble" index="6" invalid="no">7.4876111099999998e-01</row><row type="TypeDouble" index="7" invalid="no">7.0243055600000004e-01</row><row type="TypeDouble" index="8" invalid="no">6.7715833299999995e-01</row><row type="TypeDouble" index="9" invalid="no">5.1388888899999996e-01</row><row type="TypeDouble" index="10" invalid="no">5.5260277800000002e-01</row><row type="TypeDouble" index="11" invalid="no">3.6591388899999999e-01</row><row type="TypeDouble" index="12" invalid="no">3.1302777799999998e-01</row><row type="TypeDouble" index="13" invalid="no">2.4821527800000001e-01</row><row type="TypeDouble" index="14" invalid="no">2.6957277800000001e-01</row></column><column creation_time="2017-29-04 18:59:57:840" caption_spec="%n%C{ - }%c" name="L=40 Specific Heat" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 18:59:57:840" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 18:59:57:840" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">2.7822777780000001e+00</row><row type="TypeDouble" index="1" invalid="no">2.4284944440000000e+00</row><row type="TypeDouble" index="2" invalid="no">3.0815833330000002e+00</row><row type="TypeDouble" index="3" invalid="no">3.2749444440000000e+00</row><row type="TypeDouble" index="4" invalid="no">2.2533500000000002e+00</row><row type="TypeDouble" index="5" invalid="no">2.4947750000000002e+00</row><row type="TypeDouble" index="6" invalid="no">2.1062833329999999e+00</row><row type="TypeDouble" index="7" invalid="no">2.3016194440000000e+00</row><row type="TypeDouble" index="8" invalid="no">2.0021555559999999e+00</row><row type="TypeDouble" index="9" invalid="no">2.5998194440000000e+00</row><row type="TypeDouble" index="10" invalid="no">2.1355583330000001e+00</row><row type="TypeDouble" index="11" invalid="no">2.1092666670000000e+00</row><row type="TypeDouble" index="12" invalid="no">1.7937749999999999e+00</row><row type="TypeDouble" index="13" invalid="no">1.4993833329999999e+00</row><row type="TypeDouble" index="14" invalid="no">1.3064694440000000e+00</row></column><column creation_time="2017-29-04 19:01:00:807" caption_spec="%n%C{ - }%c" name="L=40 Susceptibility" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:00:807" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:00:807" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">5.0475000000000001e+01</row><row type="TypeDouble" index="1" invalid="no">5.2582500000000003e+01</row><row type="TypeDouble" index="2" invalid="no">1.0257027780000000e+02</row><row type="TypeDouble" index="3" invalid="no">9.7364722220000004e+01</row><row type="TypeDouble" index="4" invalid="no">2.1139527780000002e+01</row><row type="TypeDouble" index="5" invalid="no">5.7488055559999999e+01</row><row type="TypeDouble" index="6" invalid="no">1.5381138890000001e+01</row><row type="TypeDouble" index="7" invalid="no">2.2496444440000001e+01</row><row type="TypeDouble" index="8" invalid="no">1.5633500000000000e+01</row><row type="TypeDouble" index="9" invalid="no">6.7269722220000006e+01</row><row type="TypeDouble" index="10" invalid="no">3.1087222220000001e+01</row><row type="TypeDouble" index="11" invalid="no">6.8021111110000007e+01</row><row type="TypeDouble" index="12" invalid="no">5.4218611109999998e+01</row><row type="TypeDouble" index="13" invalid="no">3.9128055560000000e+01</row><row type="TypeDouble" index="14" invalid="no">3.1144722219999998e+01</row></column><column creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="L=60 Energy Expectation" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.6494700000000000e+00</row><row type="TypeDouble" index="1" invalid="no">-1.6114599999999999e+00</row><row type="TypeDouble" index="2" invalid="no">-1.6031700000000000e+00</row><row type="TypeDouble" index="3" invalid="no">-1.5590200000000001e+00</row><row type="TypeDouble" index="4" invalid="no">-1.4982899999999999e+00</row><row type="TypeDouble" index="5" invalid="no">-1.5266200000000001e+00</row><row type="TypeDouble" index="6" invalid="no">-1.5073799999999999e+00</row><row type="TypeDouble" index="7" invalid="no">-1.4639899999999999e+00</row><row type="TypeDouble" index="8" invalid="no">-1.4166799999999999e+00</row><row type="TypeDouble" index="9" invalid="no">-1.3929199999999999e+00</row><row type="TypeDouble" index="10" invalid="no">-1.3431800000000000e+00</row><row type="TypeDouble" index="11" invalid="no">-1.3092400000000000e+00</row><row type="TypeDouble" index="12" invalid="no">-1.2740499999999999e+00</row><row type="TypeDouble" index="13" invalid="no">-1.2526100000000000e+00</row><row type="TypeDouble" index="14" invalid="no">-1.2267900000000000e+00</row></column><column creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="L=60 Magnetization Expect" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">8.1350699999999998e-01</row><row type="TypeDouble" index="1" invalid="no">6.5917999999999999e-01</row><row type="TypeDouble" index="2" invalid="no">7.4777899999999997e-01</row><row type="TypeDouble" index="3" invalid="no">5.2551300000000001e-01</row><row type="TypeDouble" index="4" invalid="no">1.1311900000000000e-01</row><row type="TypeDouble" index="5" invalid="no">6.5268199999999998e-01</row><row type="TypeDouble" index="6" invalid="no">7.1303499999999997e-01</row><row type="TypeDouble" index="7" invalid="no">6.0660899999999995e-01</row><row type="TypeDouble" index="8" invalid="no">4.3811600000000001e-01</row><row type="TypeDouble" index="9" invalid="no">4.5920400000000000e-01</row><row type="TypeDouble" index="10" invalid="no">2.9169699999999998e-01</row><row type="TypeDouble" index="11" invalid="no">1.9716500000000001e-01</row><row type="TypeDouble" index="12" invalid="no">1.1863300000000000e-01</row><row type="TypeDouble" index="13" invalid="no">1.3425100000000001e-01</row><row type="TypeDouble" index="14" invalid="no">1.1231099999999999e-01</row></column><column creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="L=60 Specific Heat" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:12:574" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.3601900000000002e+00</row><row type="TypeDouble" index="1" invalid="no">6.2502500000000003e+00</row><row type="TypeDouble" index="2" invalid="no">4.9910800000000002e+00</row><row type="TypeDouble" index="3" invalid="no">5.1027800000000001e+00</row><row type="TypeDouble" index="4" invalid="no">2.1140699999999999e+00</row><row type="TypeDouble" index="5" invalid="no">4.7545400000000004e+00</row><row type="TypeDouble" index="6" invalid="no">4.2645700000000000e+00</row><row type="TypeDouble" index="7" invalid="no">4.5163099999999998e+00</row><row type="TypeDouble" index="8" invalid="no">3.4815900000000002e+00</row><row type="TypeDouble" index="9" invalid="no">2.7020599999999999e+00</row><row type="TypeDouble" index="10" invalid="no">2.1322299999999998e+00</row><row type="TypeDouble" index="11" invalid="no">1.9276100000000000e+00</row><row type="TypeDouble" index="12" invalid="no">1.5444000000000000e+00</row><row type="TypeDouble" index="13" invalid="no">1.5203300000000000e+00</row><row type="TypeDouble" index="14" invalid="no">1.3508700000000000e+00</row></column><column creation_time="2017-29-04 19:01:12:575" caption_spec="%n%C{ - }%c" name="L=60 Susceptibility" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:12:575" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:12:575" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">9.9614900000000006e+01</row><row type="TypeDouble" index="1" invalid="no">3.6202400000000000e+02</row><row type="TypeDouble" index="2" invalid="no">1.6001599999999999e+02</row><row type="TypeDouble" index="3" invalid="no">4.2245800000000003e+02</row><row type="TypeDouble" index="4" invalid="no">3.7122999999999998e+01</row><row type="TypeDouble" index="5" invalid="no">2.9384600000000000e+02</row><row type="TypeDouble" index="6" invalid="no">1.0507400000000000e+02</row><row type="TypeDouble" index="7" invalid="no">1.9720099999999999e+02</row><row type="TypeDouble" index="8" invalid="no">2.2614200000000000e+02</row><row type="TypeDouble" index="9" invalid="no">1.4091700000000000e+02</row><row type="TypeDouble" index="10" invalid="no">9.5623800000000003e+01</row><row type="TypeDouble" index="11" invalid="no">6.7786400000000000e+01</row><row type="TypeDouble" index="12" invalid="no">3.6261800000000001e+01</row><row type="TypeDouble" index="13" invalid="no">3.5847400000000000e+01</row><row type="TypeDouble" index="14" invalid="no">2.5254000000000001e+01</row></column><column creation_time="2017-29-04 19:01:51:413" caption_spec="%n%C{ - }%c" name="L=80 Energy Expectation" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:51:413" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:51:413" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">-1.6426275509999999e+00</row><row type="TypeDouble" index="1" invalid="no">-1.6175357140000000e+00</row><row type="TypeDouble" index="2" invalid="no">-1.6017448980000000e+00</row><row type="TypeDouble" index="3" invalid="no">-1.5771326530000001e+00</row><row type="TypeDouble" index="4" invalid="no">-1.5435204080000000e+00</row><row type="TypeDouble" index="5" invalid="no">-1.5063061220000000e+00</row><row type="TypeDouble" index="6" invalid="no">-1.4929234689999999e+00</row><row type="TypeDouble" index="7" invalid="no">-1.4424030610000000e+00</row><row type="TypeDouble" index="8" invalid="no">-1.4337704080000000e+00</row><row type="TypeDouble" index="9" invalid="no">-1.3688826530000000e+00</row><row type="TypeDouble" index="10" invalid="no">-1.3413928570000000e+00</row><row type="TypeDouble" index="11" invalid="no">-1.3064642860000000e+00</row><row type="TypeDouble" index="12" invalid="no">-1.2733775510000001e+00</row><row type="TypeDouble" index="13" invalid="no">-1.2483673470000001e+00</row><row type="TypeDouble" index="14" invalid="no">-1.2258010200000000e+00</row></column><column creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="L=80 Magnetization Expect" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">7.5805102000000002e-01</row><row type="TypeDouble" index="1" invalid="no">6.7663775500000001e-01</row><row type="TypeDouble" index="2" invalid="no">7.3523979600000000e-01</row><row type="TypeDouble" index="3" invalid="no">7.1631122400000002e-01</row><row type="TypeDouble" index="4" invalid="no">6.1139285700000001e-01</row><row type="TypeDouble" index="5" invalid="no">4.0217653100000000e-01</row><row type="TypeDouble" index="6" invalid="no">5.9443877599999995e-01</row><row type="TypeDouble" index="7" invalid="no">2.9859234699999998e-01</row><row type="TypeDouble" index="8" invalid="no">5.4331122399999998e-01</row><row type="TypeDouble" index="9" invalid="no">1.4399846899999999e-01</row><row type="TypeDouble" index="10" invalid="no">1.9543265300000001e-01</row><row type="TypeDouble" index="11" invalid="no">1.3007142899999999e-01</row><row type="TypeDouble" index="12" invalid="no">6.8836734999999996e-02</row><row type="TypeDouble" index="13" invalid="no">7.4353570999999993e-02</row><row type="TypeDouble" index="14" invalid="no">7.0669388000000000e-02</row></column><column creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="L=80 Specific Heat" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">9.7463775510000001e+00</row><row type="TypeDouble" index="1" invalid="no">8.1327551020000008e+00</row><row type="TypeDouble" index="2" invalid="no">7.1749999999999998e+00</row><row type="TypeDouble" index="3" invalid="no">6.2608673469999996e+00</row><row type="TypeDouble" index="4" invalid="no">7.0953571430000002e+00</row><row type="TypeDouble" index="5" invalid="no">6.0535714289999998e+00</row><row type="TypeDouble" index="6" invalid="no">7.3604081629999998e+00</row><row type="TypeDouble" index="7" invalid="no">5.4619387760000002e+00</row><row type="TypeDouble" index="8" invalid="no">6.1427040819999998e+00</row><row type="TypeDouble" index="9" invalid="no">2.5167448979999998e+00</row><row type="TypeDouble" index="10" invalid="no">2.7088469389999998e+00</row><row type="TypeDouble" index="11" invalid="no">2.1783469389999999e+00</row><row type="TypeDouble" index="12" invalid="no">1.7409744899999999e+00</row><row type="TypeDouble" index="13" invalid="no">1.6356989799999999e+00</row><row type="TypeDouble" index="14" invalid="no">1.6875561219999999e+00</row></column><column creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="L=80 Susceptibility" type="TypeDouble" mode="Numeric" plot_designation="Y"><comment><![CDATA[]]></comment><input_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="InputFilter" filter_name="String2DoubleFilter"><comment><![CDATA[]]></comment></simple_filter></input_filter><output_filter><simple_filter creation_time="2017-29-04 19:01:51:414" caption_spec="%n%C{ - }%c" name="OutputFilter" format="g" digits="6" filter_name="Double2StringFilter"><comment><![CDATA[]]></comment></simple_filter></output_filter><row type="TypeDouble" index="0" invalid="no">4.2852704080000001e+02</row><row type="TypeDouble" index="1" invalid="no">5.3451020410000001e+02</row><row type="TypeDouble" index="2" invalid="no">3.2920663270000000e+02</row><row type="TypeDouble" index="3" invalid="no">2.0438928569999999e+02</row><row type="TypeDouble" index="4" invalid="no">3.9835663269999998e+02</row><row type="TypeDouble" index="5" invalid="no">7.0792346940000004e+02</row><row type="TypeDouble" index="6" invalid="no">5.6042346940000004e+02</row><row type="TypeDouble" index="7" invalid="no">6.1487244899999996e+02</row><row type="TypeDouble" index="8" invalid="no">4.2959897960000001e+02</row><row type="TypeDouble" index="9" invalid="no">7.4375000000000000e+01</row><row type="TypeDouble" index="10" invalid="no">1.1113673470000001e+02</row><row type="TypeDouble" index="11" invalid="no">6.3667346940000002e+01</row><row type="TypeDouble" index="12" invalid="no">2.5287142859999999e+01</row><row type="TypeDouble" index="13" invalid="no">2.3853163270000000e+01</row><row type="TypeDouble" index="14" invalid="no">2.4134081630000001e+01</row></column><column_width column="0">120</column_width><column_width column="1">120</column_width><column_width column="2">120</column_width><column_width column="3">120</column_width><column_width column="4">120</column_width><column_width column="5">120</column_width><column_width column="6">120</column_width><column_width column="7">120</column_width><column_width column="8">120</column_width><column_width column="9">120</column_width><column_width column="10">120</column_width><column_width column="11">120</column_width><column_width column="12">120</column_width><column_width column="13">120</column_width><column_width column="14">120</column_width><column_width column="15">120</column_width><column_width column="16">120</column_width></table>
+geometry	2	2	1332	492	active
+
+</table>
+<multiLayer>
+Graph2	1	1	4/29/17 8:34 PM
+geometry	338	58	691	427	
+WindowLabel		2
+Margins	5	5	5	5
+Spacing	5	5
+LayerCanvasSize	441	307
+Alignement	0	0
+<graph>
+ggeometry	5	5	676	369
+PlotTitle		#000000	4
+<Antialiasing>1</Antialiasing>
+Background	#ffffff	255
+Margin	0
+Border	0	#000000
+grid	0	0	0	0	#0000ff	0	0	#a0a0a4	2	0	#0000ff	0	0	#a0a0a4	2	0	0	0	2	0
+EnabledAxes	1	0	1	0	
+AxesTitles	Temp	Abs Mag. Expectation			
+AxesTitleColors	#000000	#000000	#000000	#000000	
+AxesTitleAlignment	4	4	4	4
+TitleFont	.SF NS Text	15	75	0	0	0
+ScaleFont0	Helvetica	24	75	0	0	0
+ScaleFont1	.SF NS Text	13	75	0	0	0
+ScaleFont2	Helvetica	24	75	0	0	0
+ScaleFont3	.SF NS Text	13	75	0	0	0
+AxisFont0	Helvetica	24	50	0	0	0
+AxisFont1	.SF NS Text	13	50	0	0	0
+AxisFont2	Helvetica	24	50	0	0	0
+AxisFont3	.SF NS Text	13	50	0	0	0
+EnabledTickLabels	1	1	1	1	
+AxesColors	#000000	#000000	#000000	#000000
+AxesNumberColors	#000000	#000000	#000000	#000000
+AxesBaseline	0	0	0	0	
+CanvasBackground	#ffffff	255
+curve	Table1_Temperature	Table1_L=20 Magnetization Expect	2	1	0	0	1	7	1	0	0	0	0	16	0	2	0	0	29	1
+curve	Table1_Temperature	Table1_L=40 Magnetization Expect	2	1	1	0	1	7	2	1	1	0	0	16	0	2	0	0	29	1
+curve	Table1_Temperature	Table1_L=60 Magnetization Expect	2	1	3	0	1	7	3	3	3	0	0	16	0	2	0	0	29	1
+curve	Table1_Temperature	Table1_L=80 Magnetization Expect	2	1	12	0	1	7	4	12	12	0	0	16	0	2	0	0	29	1
+scale	0	0	1	0	8	5	0	0
+scale	1	0	1	0	8	5	0	0
+scale	2	2.05	2.4	0	8	5	0	0
+scale	3	2.05	2.4	0	8	5	0	0
+LabelsFormat	0	4	0	4	0	4	0	4	
+AxisType	0	0	0	0	
+MajorTicks	1	1	1	1	
+MinorTicks	1	1	1	1	
+TicksLength	5	9
+DrawAxesBackbone	1
+AxesLineWidth	1
+LabelsRotation	0	0
+<line>	2.28063	0.993769	2.28063	0.00623052999999996	1	#000000	DashLine	0	0	4	45	1</line>
+<legend>	2.31030150753769	0.996677740863787	.SF NS Text	13	50	0	0	0	#000000	1	0	#ffffff	0	\c{1}L=40	\c{2}L=60	\c{3}L=100	\c{4}L=140	</legend>
+<text>	2.25162393162393	0.993355481727575	.SF NS Text	13	50	0	0	0	#000000	0	0	#ffffff	0	2.281</text>
+</graph>
+</multiLayer>
+<log>
+[4/29/17 7:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.4
+a  = -98.7487532216473 +/- 0
+b  = 94.7289072318089 +/- 5.47984058649602e+32
+c  = -21.8690360911102 +/- 3.13458924851014e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00076034113754876
+R^2 = 0.994060946630989
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 7:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=40 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.4
+a  = -162.010287476289 +/- 0
+b  = 155.24379488997 +/- 1.30959873133111e+31
+c  = -36.3330430837292 +/- 7.49119263797171e-159
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00228454982043506
+R^2 = 0.993174775063768
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 7:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.4
+a  = -84.8521560842604 +/- 0
+b  = 87.22037180176 +/- 3.51618272928689e+33
+c  = -21.4469649872767 +/- 2.01133379793125e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0313051300140412
+R^2 = 0.92174629647624
+---------------------------------------------------------------------------------------
+Iterations = 4
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 7:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=80 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.4
+a  = -164.560363765514 +/- 0
+b  = 159.309919010292 +/- 2.62444671769087e+32
+c  = -37.727989986881 +/- 1.50124120117127e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0222839737642967
+R^2 = 0.952488779387237
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^(-2)+b*x^(-1)+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.38
+a  = -237.071473287918 +/- 0
+b  = 221.668890983621 +/- 1.0135162623281e+33
+c  = -51.0080018831507 +/- 5.79753576567202e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00780288734365419
+R^2 = 0.98285498947978
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=40 Magnetization Expect, using function: a*x^(-2)+b*x^(-1)+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.38
+a  = -245.632887448986 +/- 0
+b  = 230.358742361845 +/- 2.28265742064722e+33
+c  = -53.222296976094 +/- 1.30573021163119e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0395799616692057
+R^2 = 0.931877077737554
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^(-2)+b*x^(-1)+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.38
+a  = -114.652408325098 +/- 0
+b  = 113.937490069964 +/- 3.90010877191865e+32
+c  = -27.5494782542364 +/- 2.23094793202198e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.350310543938301
+R^2 = 0.623092507327584
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:28 PM	Plot: ''Graph1'']
+Non-linear fit of dataset: Table1_L=80 Magnetization Expect, using function: a*x^(-2)+b*x^(-1)+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.38
+a  = -47.6108403472548 +/- 0
+b  = 56.8497532042471 +/- 4.12779981351398e+33
+c  = -15.4846039744339 +/- 2.36119221190143e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.129428866515716
+R^2 = 0.874933601219335
+---------------------------------------------------------------------------------------
+Iterations = 4
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:30 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -250.128654827481 +/- 0
+b  = 233.214159293352 +/- 6.08588482460844e+32
+c  = -53.5519297502954 +/- 3.48125987199583e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0018756426205849
+R^2 = 0.974288639813796
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/29/17 8:30 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=40 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -174.579082260646 +/- 0
+b  = 164.693210561681 +/- 2.13451338583501e+33
+c  = -38.0587432943938 +/- 1.22098856788871e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0230728052273268
+R^2 = 0.749327517529828
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -250.128654827481 +/- 0
+b  = 233.214159293352 +/- 6.08588482460844e+32
+c  = -53.5519297502954 +/- 3.48125987199583e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0018756426205849
+R^2 = 0.974288639813796
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -250.154345308232 +/- 0
+b  = 233.237559791902 +/- 6.08588453454735e+32
+c  = -53.557254008835 +/- 3.48125970608959e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00187564244179383
+R^2 = 0.974288642264669
+---------------------------------------------------------------------------------------
+Iterations = 2
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -250.155185561867 +/- 0
+b  = 233.238310526822 +/- 6.08588453437531e+32
+c  = -53.557421493076 +/- 3.48125970594767e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00187564244168779
+R^2 = 0.974288642266123
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=20 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -250.154916382272 +/- 0
+b  = 233.238083082783 +/- 9.31866588223043e+30
+c  = -53.5573737816883 +/- 5.33048182015471e-159
+--------------------------------------------------------------------------------------
+Chi^2 = 0.00187564244168148
+R^2 = 0.974288642266209
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=40 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -175.072759842392 +/- 0
+b  = 165.142841802874 +/- 5.00447328435748e+29
+c  = -38.1610372704951 +/- 2.86270272078132e-160
+--------------------------------------------------------------------------------------
+Chi^2 = 0.0230727444696176
+R^2 = 0.749328177626667
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = 100.499592832052 +/- 0
+b  = -83.6464709374684 +/- 7.94971163695791e+33
+c  = 17.7839176080822 +/- 4.54740977084083e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.32004082834231
+R^2 = 0.272086728493152
+---------------------------------------------------------------------------------------
+Iterations = 3
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = 100.514949940983 +/- 0
+b  = -83.6604719301699 +/- 7.94971163647154e+33
+c  = 17.7871060546031 +/- 4.54740977056215e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.320040828303149
+R^2 = 0.27208672858222
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = iteration is not making progress towards solution
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = 100.512797056842 +/- 0
+b  = -83.6585431285917 +/- 7.94971163646715e+33
+c  = 17.7866745419168 +/- 4.54740977055998e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.320040828302796
+R^2 = 0.272086728583024
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=60 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = 100.514506332657 +/- 0
+b  = -83.6600671382445 +/- 1.59004375319344e+33
+c  = 17.787013785933 +/- 9.09539971955384e-157
+--------------------------------------------------------------------------------------
+Chi^2 = 0.320040828302604
+R^2 = 0.272086728583461
+---------------------------------------------------------------------------------------
+Iterations = 0
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=80 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -236.117214433423 +/- 0
+b  = 228.965829976702 +/- 4.66504301468214e+33
+c  = -54.7397555373711 +/- 2.6685071302126e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.110208207738738
+R^2 = 0.775063539341062
+---------------------------------------------------------------------------------------
+Iterations = 5
+Status = success
+---------------------------------------------------------------------------------------
+[4/29/17 8:31 PM	Plot: ''Graph2'']
+Non-linear fit of dataset: Table1_L=80 Magnetization Expect, using function: a*x^-2+b*x^-1+c
+Y standard errors: Unknown
+Scaled Levenberg-Marquardt algorithm with tolerance = 0.0001
+From x = 2.1 to x = 2.3
+a  = -236.148669389124 +/- 0
+b  = 228.994442402693 +/- 4.66504301392988e+33
+c  = -54.7462568129809 +/- 2.66850712978213e-156
+--------------------------------------------------------------------------------------
+Chi^2 = 0.110208207703194
+R^2 = 0.775063539413606
+---------------------------------------------------------------------------------------
+Iterations = 1
+Status = success
+---------------------------------------------------------------------------------------
+</log>
